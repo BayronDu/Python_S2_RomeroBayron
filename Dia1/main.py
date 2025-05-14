@@ -97,6 +97,15 @@ def valorDolar():
 valorFinalDolar = valorDolar()
 print("el valor del dolar es: "+str(valorFinalDolar))
 
+#3. Función sin retorno y con parámetros
+def concatenarNombres(nombre,apellido):
+    print("Su nombre completo es:"+nombre+" "+apellido)
+concatenarNombres("Sharick","Ibañez")
+
+#4. Función sin retorno y sin parámetros
+def funcionX():
+    print("Soy una función que solo vive y existe")
+funcionX()
 #
 
 

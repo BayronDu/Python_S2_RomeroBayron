@@ -1,7 +1,8 @@
 contador = True
 id =1 # Contador de personas
-listaPersonas=[]
-
+listaPersonas= [{"id":1005338700, "nombre": "bayron", "apellido": "romero", "edad": 27, "ciudadNacimiento": "b2ga","telefonoPersonal": 23,"telefonoTrabajo": 23},{"id":2, "nombre": "Yesica", "apellido": "Sanchez", "edad": 18, "ciudadNacimiento": "bga","telefonoPersonal": 432,"telefonoTrabajo": 2342}
+,{"id":1, "nombre": "Camila", "apellido": "caceres", "edad": 14, "ciudadNacimiento": "bga","telefonoPersonal": 98,"telefonoTrabajo": 87}
+]
 while(contador):
     print("#################")
     print("#### Librería de personas ####")
@@ -75,9 +76,7 @@ while(contador):
     
     elif(opcionUsuario == 4):
 
-        listaPersonas= [{"id":1, "nombre": "bayron", "apellido": "romero", "edad": 27, "ciudadNacimiento": "b2ga","telefonoPersonal": 23,"telefonoTrabajo": 23},{"id":2, "nombre": "Yesica", "apellido": "Sanchez", "edad": 18, "ciudadNacimiento": "bga","telefonoPersonal": 432,"telefonoTrabajo": 2342}
-,{"id":3, "nombre": "Camila", "apellido": "caceres", "edad": 14, "ciudadNacimiento": "bga","telefonoPersonal": 98,"telefonoTrabajo": 87}
-]
+        
         persMod = (int(input("Por favor ingresa el ID de la persona que deseas modificar: "))) ## id persona a modificar
         id3 = persMod - 1 #IDENTIFICADOR
         listaPersonas.pop(id3) #borra el diccionario en la posicion ide
@@ -93,11 +92,17 @@ while(contador):
         listaPersonas.insert(id3,diccionarioPersona)
        # print(listaPersonas)
     
-        persEliminada = (int(input("Por favor digite el ID de la persona que desea eliminar de la lista: ")))
-        id4 = persEliminada -1
-        listaPersonas.pop(id4)
+    elif(opcionUsuario == 5):
 
-        #print(listaPersonas)
+        persEliminada = (int(input("Por favor digite el ID de la persona que desea eliminar de la lista: ")))
+       # print(listaPersonas)
+
+        for x in range(len(listaPersonas)):
+            if(int(listaPersonas[x]["id"]) == persEliminada):
+                listaPersonas.pop(x)
+                break
+                #print(listaPersonas[x]["nombre"])
+                #print("valor de x: " +str(x))
 
     elif(opcionUsuario==6):
         print("Adios, vuelva pronto")
